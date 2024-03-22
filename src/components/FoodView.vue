@@ -6,7 +6,25 @@ import { ref } from 'vue';
 import FoodCard from './FoodCard.vue'
 
 let foodList=ref([])
+let currentId=-1
+function SelectItem(item){
+currentId=item.id
+console.log(currentId)
+}
+async function  Delete(){
+  let res = await supabase.from('food').delete().eq("id",currentId).then(()=>{
+foodList.value=foodList.value.filter((food)=>{
+  return food.id!=currentId
+})
 
+  })
+  console.log(res)
+
+
+
+
+  
+}
 
 async function GetFood(){
 const data= await supabase.from('food').select()
@@ -25,11 +43,11 @@ onMounted(()=>{
         <RouterLink to="/addFood" class="w-[20%] border-2 bg-[rgb(66,66,82)]  border-white foodcard p-3 text-center  font-mono ">
             Add
         </RouterLink>
-        <div class="w-[54%] border-2 bg-[rgb(66,66,82)] border-white foodcard p-3 text-center text-red-500  font-mono"> Delete</div>
+        <div @click="Delete()" class="w-[54%] border-2 bg-[rgb(66,66,82)] border-white foodcard p-3 text-center text-red-500  font-mono"> Delete</div>
     </div>
-  <div class=" h-screen flex flex-col gap-6 items-center justify-center  overflow-scroll mt-10">
+  <div class=" flex flex-col gap-6 items-center justify-center mt-10 mb-[20%]">
 
-    <FoodCard v-for="food in foodList" :name="food.name" :kcal="food.kcal"></FoodCard>
+    <FoodCard @click="SelectItem(food)" v-for="food in foodList" :name="food.name" :kcal="food.kcal"></FoodCard>
 
   </div>
 </template>
