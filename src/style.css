@@ -11,3 +11,21 @@ div{
 .foodcard{
 box-shadow: black 10px 10px;
 }
+input{
+  background-color: transparent;
+  border-color: white;
+  border-width: 2px;
+  padding: 2px;
+box-shadow: black 10px 10px;
+text-align: center;
+  color: white;
+}
+button{
+  background-color: green;
+  border-color: white;
+  border-width: 2px;
+  padding: 2px;
+  box-shadow: black 10px 10px; 
+  text-align: center;
+  color: white;
+}
