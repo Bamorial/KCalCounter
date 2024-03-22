@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: rgb(66, 66, 82);
+}
+div{
+  color: white
+}
+.foodcard{
+box-shadow: black 10px 10px;
+}
