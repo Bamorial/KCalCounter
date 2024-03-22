@@ -9,5 +9,6 @@ import { onMounted } from 'vue';
     <div class="w-screen h-screen p-10">
 
         <RouterLink class="w-[80%] h-[10%] p-5 border-white border-2 foodcard " to="./food"> Food</RouterLink>
+        <RouterLink class="w-[80%] h-[10%] p-5 border-white border-2 foodcard " to="./day"> Day</RouterLink>
     </div>
 </template>
