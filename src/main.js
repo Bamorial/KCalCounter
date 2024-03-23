@@ -7,6 +7,8 @@ import App from "./App.vue";
 import HomeView from "./components/HomeView.vue";
 import AddFood from "./components/AddFoodView.vue";
 import DayView from "./components/DayView.vue";
+import DayDetailsView from "./components/DayDetailsView.vue";
+import AddNewFood from "./components/AddNewFood.vue";
 
 const app = createApp(App);
 const router = createRouter({
@@ -16,6 +18,8 @@ const router = createRouter({
     { path: "/food", component: FoodView },
     { path: "/addFood", component: AddFood },
     { path: "/day", component: DayView },
+    { path: "/day/:id", component: DayDetailsView },
+    { path: "/day/:id/addNewFood", component: AddNewFood },
   ],
 });
 app.use(router);
