@@ -16,7 +16,7 @@ console.log(res);
     <div class="flex flex-col items-center mt-10 ">
     <div class="flex flex-col w-[80%] items-center  gap-3">
 
-        <input class="font-mono w-[59%]" type="date" v-model="date" placeholder="date">
+        <input class="font-mono h-10 w-[59%]" type="date" v-model="date" placeholder="date">
         <RouterLink class=" bg-green-500 border-white border-2 text-center foodcard p-2 w-[59%]" to="/day" @click="AddDay()" > Add</RouterLink>
     </div>
     </div>
