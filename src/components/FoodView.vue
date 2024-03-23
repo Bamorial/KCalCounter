@@ -36,7 +36,7 @@ async function GetFood(){
 const data= await supabase.from('food').select()
 foodList.value=data.data
 console.log(foodList.value)
-for(a in foodList.value){
+for(let a in foodList.value){
   isSelected.value.push(0)
 }
 }

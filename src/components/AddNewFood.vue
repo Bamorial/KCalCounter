@@ -37,7 +37,9 @@ router.go(-1)
 </script>
 
 <template>
+    <div class=" flex flex-col gap-6 items-center justify-center mt-10 mb-[30%]">
 <FoodCard @click="Select(food.id)" v-for="food in foodList" :name="food.name" :kcal="food.kcal"></FoodCard>
+</div>
 </template>
 
 <style scoped>
