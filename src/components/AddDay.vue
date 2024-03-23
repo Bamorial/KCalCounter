@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { supabase } from '../supabaseClient';
 let dt=new Date();
 
-let date=ref(dt.getFullYear()+'-'+(dt.getMonth()+(+1))+'-'+dt.getDate())
+let date=ref(new Date(dt.getFullYear()+'-'+(dt.getMonth()+(+1))+'-'+dt.getDate()))
 async function AddDay(){
 console.log(date.value)
 let res =await supabase.from('scan').insert([{date:date.value, kcaltotal:0}])
