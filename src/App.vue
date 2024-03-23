@@ -6,6 +6,7 @@ import { ref } from 'vue';
 import FoodCard from './components/FoodCard.vue'
 import FoodView from './components/FoodView.vue'
 import { useRoute } from 'vue-router';
+import NavBar from './components/NavBar.vue';
 
 
 
@@ -15,6 +16,7 @@ import { useRoute } from 'vue-router';
 
 <template >
 <RouterView></RouterView>
+<NavBar class="fixed bottom-0 "></NavBar>
 </template>
 
 

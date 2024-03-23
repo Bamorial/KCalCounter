@@ -4,8 +4,9 @@ import { onMounted } from 'vue';
 import {supabase} from '../supabaseClient'
 import { ref } from 'vue';
 import FoodCard from './FoodCard.vue'
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 let route=useRoute()
+let router=useRouter()
 let pageId=route.params.id
 let foodList=ref([])
 let currentId=-1
@@ -29,6 +30,7 @@ async function  Select(id){
     console.log(id)
 let res= await supabase.from('food_item').insert([{scan_id:pageId, food_id:id}])
 console.log(res)
+router.go(-1)
 }
 
 
