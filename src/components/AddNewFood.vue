@@ -5,6 +5,7 @@ import {supabase} from '../supabaseClient'
 import { ref } from 'vue';
 import FoodCard from './FoodCard.vue'
 import { useRoute, useRouter } from 'vue-router';
+
 let route=useRoute()
 let router=useRouter()
 let pageId=route.params.id
@@ -22,6 +23,7 @@ foodList.value=data.data
 console.log(foodList.value)
 }
 onMounted(()=>{
+  
   GetFood()
 })
 

@@ -15,8 +15,11 @@ import NavBar from './components/NavBar.vue';
 </script>
 
 <template >
-<RouterView></RouterView>
-<NavBar class="fixed bottom-0 "></NavBar>
+    
+
+        <RouterView></RouterView>
+        <NavBar class="fixed bottom-0 "></NavBar>
+    
 </template>
 
 

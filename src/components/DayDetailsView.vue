@@ -19,6 +19,7 @@ async function  Delete(){
  foods.value=[]
  total.value=0
  isSelected.value.fill(0)
+ ids=[]
  GetFood()
 
 
